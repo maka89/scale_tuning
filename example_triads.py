@@ -67,7 +67,7 @@ config=[
             [1,0,0,0,1,1,1],
             [1,1,0,0,0,1,1]
         ]),
-        "weight":None,#np.ones(6),
+        "weight":0.005*np.ones(6),
         "weight_et":None,
         "target":ratio_to_cents(3/2),
         "semis":7
@@ -83,9 +83,9 @@ config=[
 ]
 
 
-sg = ScaleGeneratorTriads(config,octave_locked=True,order=2,n_iter=100)
+sg = ScaleGeneratorTriads(config,octave_locked=True,order=6,n_iter=100)
 sg.optimize()
 sg.print_report()
 for i in range(0,12):
     for j in range(0,12):
-        tun_strr = sg.export_tun('output_files/triads/major_scale_triad_optimized.tun',offset=i,in_tune_key=j,add_scale_to_filename=True)
+        tun_strr = sg.export_tun('output_files/major_triads/major_triads_optimized.tun',offset=i,in_tune_key=j,add_scale_to_filename=True)

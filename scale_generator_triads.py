@@ -144,7 +144,7 @@ class ScaleGeneratorTriads:
         rep = self.print_report(disp=False)
         
         strr=""
-        strr += ";{} Scale\n".format(self.offsets[offset])
+        strr += ";{} Scale Optimized for Major Chords\n".format(self.offsets[offset])
         if in_tune_key is not None:
             strr += ";{} In Perfect tune \n".format(self.offsets[in_tune_key])
         else:
