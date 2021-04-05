@@ -36,7 +36,7 @@ Id = "ID_diatonic_custom_Bb"
 
 [Exact Tuning]
 basefreq=8.17579891564371
-note 0 = -0.0000
+note 0 = 0.0000
 note 1 = 97.3726
 note 2 = 194.7451
 note 3 = 307.7867

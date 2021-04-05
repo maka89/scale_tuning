@@ -7,7 +7,7 @@ def ratio_to_cents(x):
 def cents_to_ratio(x):
     return 2**(x/1200)
 
-class ScaleGenerator:
+class ScaleGeneratorTriads:
     def __init__(self,config,octave_locked=True,order=2,n_iter=1):
         self.config=config
         self.out = None
@@ -20,7 +20,7 @@ class ScaleGenerator:
         def fn(x,args):
             retval = 0.0
             if self.octave_locked:
-                retval += 0.01*x[-1]**2
+                #retval += 0.01*x[-1]**2
                 x=np.concatenate((x[0:-1], np.array([1200-np.sum(x[0:-1])])))
                  
             conf = args[0]
@@ -30,6 +30,21 @@ class ScaleGenerator:
                     retval += np.mean( c["weight"]*np.abs((np.dot(c["matrix"],x)-c["target"])/5.0)**self.order )
                 if c["weight_et"] is not None:
                     retval += np.mean( c["weight_et"]*np.abs((np.dot(c["matrix"],x)-c["semis"]*100)/5.0)**self.order )
+
+            
+            f0 = 1
+            f1 = cents_to_ratio(np.sum(x[0:1]))
+            f2 = cents_to_ratio(np.sum(x[0:2]))
+            f4 = cents_to_ratio(np.sum(x[0:4]))
+
+            f3 = cents_to_ratio(np.sum(x[0:3]))
+            f5 = cents_to_ratio(np.sum(x[0:5]))
+            f6 = cents_to_ratio(np.sum(x[0:6]))
+
+            retval += 1000*(((f4-f2) - (f2-f0))/f0 )**2 #C
+            retval += 1000*(((2*f0-f5) - (f5-f3))/f3)**2 #F
+            retval += 1000*(((2*f1-f6) - (f6-f4))/f4)**2 #G
+
             return retval
         grad_fn = grad(fn,0)
         x0= np.array([200,200,100,200,200,200,100])
@@ -53,6 +68,19 @@ class ScaleGenerator:
         for i in range(1,7):
             self.x[i] = tmp[i-1]
         print(self.res)
+        x=self.res["x"]
+        f0 = 1
+        f1 = cents_to_ratio(np.sum(x[0:1]))
+        f2 = cents_to_ratio(np.sum(x[0:2]))
+        f4 = cents_to_ratio(np.sum(x[0:4]))
+
+        f3 = cents_to_ratio(np.sum(x[0:3]))
+        f5 = cents_to_ratio(np.sum(x[0:5]))
+        f6 = cents_to_ratio(np.sum(x[0:6]))
+        
+        print("C: ", ((f4-f2) - (f2-f0))/f0) #C
+        print("F: ",((2*f0-f5) - (f5-f3) )/f3) #F
+        print("G: ",((2*f1-f6) - (f6-f4))/f4) #G
 
     def print_report(self,disp=True):
         #print(self.res["x"])

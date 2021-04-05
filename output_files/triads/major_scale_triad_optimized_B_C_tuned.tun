@@ -1,0 +1,165 @@
+;B Scale
+;C In Perfect tune 
+; Scale Cents = [ 0.00, 191.61, 383.73, 493.48, 697.64, 882.53, 1079.17 ]
+; Scale Steps = [ 191.61, 192.12, 109.75, 204.17, 184.89, 196.64, 120.83 ]
+;
+;Tuning Report - Just Intonation errors (in Cents) :
+;Minor 2nd
+;Min: -1.98  Max: 9.10  Avg: 3.56  MAE: 5.54  Equal Temp: -11.73
+; 
+;Major 2nd
+;Min: -19.02  Max: 0.26  Avg: -10.03  MAE: 10.13  Equal Temp: -3.91
+; 
+;Minor 3rd
+;Min: -13.77  Max: 1.83  Avg: -4.22  MAE: 5.13  Equal Temp: -15.64
+; 
+;Major 3rd
+;Min: -4.79  Max: 2.74  Avg: -1.54  MAE: 3.37  Equal Temp: 13.69
+; 
+;Perfect 5th
+;Min: -11.03  Max: 4.57  Avg: -4.34  MAE: 5.86  Equal Temp: -1.96
+; 
+;Octave
+;Min: 0.00  Max: 0.00  Avg: 0.00  MAE: 0.00  Equal Temp: 0.00
+; 
+[Scale Begin]
+Format= "AnaMark-TUN"
+FormatVersion= 200
+FormatSpecs= "http:\\www.mark-henning.de\eternity\tuningspecs.html"
+
+[Info]
+Name = "Diatonic Custom scale B"
+Id = "ID_diatonic_custom_B"
+
+[Exact Tuning]
+basefreq=8.17579891564371
+note 0 = 0.0000
+note 1 = 95.8042
+note 2 = 191.8643
+note 3 = 287.9244
+note 4 = 397.6715
+note 5 = 499.7558
+note 6 = 601.8401
+note 7 = 694.2842
+note 8 = 786.7283
+note 9 = 885.0460
+note 10 = 983.3637
+note 11 = 1104.1958
+note 12 = 1200.0000
+note 13 = 1295.8042
+note 14 = 1391.8643
+note 15 = 1487.9244
+note 16 = 1597.6715
+note 17 = 1699.7558
+note 18 = 1801.8401
+note 19 = 1894.2842
+note 20 = 1986.7283
+note 21 = 2085.0460
+note 22 = 2183.3637
+note 23 = 2304.1958
+note 24 = 2400.0000
+note 25 = 2495.8042
+note 26 = 2591.8643
+note 27 = 2687.9244
+note 28 = 2797.6715
+note 29 = 2899.7558
+note 30 = 3001.8401
+note 31 = 3094.2842
+note 32 = 3186.7283
+note 33 = 3285.0460
+note 34 = 3383.3637
+note 35 = 3504.1958
+note 36 = 3600.0000
+note 37 = 3695.8042
+note 38 = 3791.8643
+note 39 = 3887.9244
+note 40 = 3997.6715
+note 41 = 4099.7558
+note 42 = 4201.8401
+note 43 = 4294.2842
+note 44 = 4386.7283
+note 45 = 4485.0460
+note 46 = 4583.3637
+note 47 = 4704.1958
+note 48 = 4800.0000
+note 49 = 4895.8042
+note 50 = 4991.8643
+note 51 = 5087.9244
+note 52 = 5197.6715
+note 53 = 5299.7558
+note 54 = 5401.8401
+note 55 = 5494.2842
+note 56 = 5586.7283
+note 57 = 5685.0460
+note 58 = 5783.3637
+note 59 = 5904.1958
+note 60 = 6000.0000
+note 61 = 6095.8042
+note 62 = 6191.8643
+note 63 = 6287.9244
+note 64 = 6397.6715
+note 65 = 6499.7558
+note 66 = 6601.8401
+note 67 = 6694.2842
+note 68 = 6786.7283
+note 69 = 6885.0460
+note 70 = 6983.3637
+note 71 = 7104.1958
+note 72 = 7200.0000
+note 73 = 7295.8042
+note 74 = 7391.8643
+note 75 = 7487.9244
+note 76 = 7597.6715
+note 77 = 7699.7558
+note 78 = 7801.8401
+note 79 = 7894.2842
+note 80 = 7986.7283
+note 81 = 8085.0460
+note 82 = 8183.3637
+note 83 = 8304.1958
+note 84 = 8400.0000
+note 85 = 8495.8042
+note 86 = 8591.8643
+note 87 = 8687.9244
+note 88 = 8797.6715
+note 89 = 8899.7558
+note 90 = 9001.8401
+note 91 = 9094.2842
+note 92 = 9186.7283
+note 93 = 9285.0460
+note 94 = 9383.3637
+note 95 = 9504.1958
+note 96 = 9600.0000
+note 97 = 9695.8042
+note 98 = 9791.8643
+note 99 = 9887.9244
+note 100 = 9997.6715
+note 101 = 10099.7558
+note 102 = 10201.8401
+note 103 = 10294.2842
+note 104 = 10386.7283
+note 105 = 10485.0460
+note 106 = 10583.3637
+note 107 = 10704.1958
+note 108 = 10800.0000
+note 109 = 10895.8042
+note 110 = 10991.8643
+note 111 = 11087.9244
+note 112 = 11197.6715
+note 113 = 11299.7558
+note 114 = 11401.8401
+note 115 = 11494.2842
+note 116 = 11586.7283
+note 117 = 11685.0460
+note 118 = 11783.3637
+note 119 = 11904.1958
+note 120 = 12000.0000
+note 121 = 12095.8042
+note 122 = 12191.8643
+note 123 = 12287.9244
+note 124 = 12397.6715
+note 125 = 12499.7558
+note 126 = 12601.8401
+note 127 = 12694.2842
+
+[Scale End]
