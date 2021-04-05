@@ -102,9 +102,10 @@ class ScaleGenerator:
         for i in range(0,128):
             keys[i]+=offset*100
 
+        in_tune_cents = 1.0*keys[in_tune_key]
         if in_tune_key is not None:
             for i in range(0,128):
-                keys[i] = keys[i]-keys[in_tune_key]+100*in_tune_key
+                keys[i] = keys[i]-in_tune_cents+100*in_tune_key
 
         return keys
 
